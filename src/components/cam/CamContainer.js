@@ -14,7 +14,7 @@ import { useParams } from "react-router-dom";
 const CamContainer = () => {
 
   let { eventID } = useParams();
-  console.log('id da paramentro: ' , eventID);
+
   const [listCam, setListCam] = useState(getEventsCamByEvent(eventID)[0].camList);
   const [active, setActive] = useState();
 
@@ -23,7 +23,21 @@ const CamContainer = () => {
     setActive(Math.random);
   }
 
-  useEffect(() => {}, [listCam]);
+  function editStatusAllCam(status) {
+    setListCam(editAllStatusCam(eventID, status));
+    setActive(Math.random);
+  }
+
+  function editScheduleAllCam(cam) {
+    console.log('cam.scheduledStartDate: ', cam.scheduledStartDate);
+    console.log('cam.scheduledEndDate: ', cam.scheduledEndDate);
+    setListCam(editAllScheduleCam(eventID, cam.scheduledStartDate, cam.scheduledEndDate));
+    setActive(Math.random);
+  }
+
+  useEffect(() => {    
+
+    }, [listCam]);
 
   return (
     <div>
@@ -38,7 +52,7 @@ const CamContainer = () => {
           />
           <br />
           <CamEditAllStatusModal
-            callbackEditStausCam={editAllStatusCam}
+            callbackEditStatusCam={editStatusAllCam}
             labelModal="Edit All Status Cam"
           />
           <br />

@@ -18,7 +18,6 @@ export function getEventsCamByEvent(eventId) {
 }
 
 export function getEventCamByEventAndCamID(eventId, camId) {
-    console.log('eventCamJson: ', eventsCam);
     return eventCamJson.filter( element => element.eventId ==eventId)[0].camList.filter( element => element.camId ==camId)
    }
 
@@ -43,10 +42,17 @@ export function editCam(eventId, cam) {
    return eventCamJson 
 }
 
-export function editAllStatusCam(status) {
-    console.log('status cam in manager: ' , status);
+export function editAllStatusCam(eventId, status) {
+    eventCamJson.filter( element => element.eventId ==eventId)[0].camList.forEach((cam) => {
+        cam.status =status
+    });
+   return eventCamJson.filter( element => element.eventId ==123)[0].camList
 }
 
-export function editAllScheduleCam() {
-    console.log('editAllScheduleCam');
+export function editAllScheduleCam(eventId, scheduledStartDate, scheduledEndDate) {
+    eventCamJson.filter( element => element.eventId ==eventId)[0].camList.forEach((cam) => {
+        cam.scheduledStartDate = scheduledStartDate
+        cam.scheduledEndDate = scheduledEndDate
+    });
+    return eventCamJson.filter( element => element.eventId ==123)[0].camList
 }

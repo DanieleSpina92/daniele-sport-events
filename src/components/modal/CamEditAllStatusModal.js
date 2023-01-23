@@ -19,7 +19,7 @@ const style = {
 
 export default function CamEditAllStatusModal({
   labelModal,
-  callbackEditStausCam,
+  callbackEditStatusCam,
 }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -31,7 +31,7 @@ export default function CamEditAllStatusModal({
   };
 
   function editStatusCam() {
-    callbackEditStausCam(status);
+    callbackEditStatusCam(status);
   }
   return (
     <div style={{ border: "1px solid #8FBC8F", borderRadius: "5px" }}>
@@ -61,7 +61,6 @@ export default function CamEditAllStatusModal({
                 label="Age"
                 onChange={handleChange}
               >
-                <MenuItem value="Inactive">Inactive</MenuItem>
                 <MenuItem value="Pending">Pending</MenuItem>
                 <MenuItem value="Success">Success</MenuItem>
               </Select>

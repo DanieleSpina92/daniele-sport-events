@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   TextField,
@@ -12,7 +12,6 @@ import BasicModal from "../modal/BasicModal";
 import CamEditModal from "../modal/CamEditModal";
 
 const CamElement = ({ camElement, editCamCallback }) => {
-  
   function editCam(cam) {
     editCamCallback(cam);
   }
