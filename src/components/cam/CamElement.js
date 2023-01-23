@@ -1,12 +1,5 @@
-import React, { useEffect } from "react";
-import {
-  Card,
-  TextField,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Radio,
-} from "@mui/material";
+import React from "react";
+import { Card, TextField, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import BasicModal from "../modal/BasicModal";
 import CamEditModal from "../modal/CamEditModal";
@@ -15,20 +8,44 @@ const CamElement = ({ camElement, editCamCallback }) => {
   function editCam(cam) {
     editCamCallback(cam);
   }
+  const [status, setStatus] = React.useState(camElement.status);
+
+  function getColorStatus(status) {
+    switch (status) {
+      case "Start":
+        return "Green";
+      case "Stop":
+        return "#8B0000";
+      default:
+        return "blue";
+    }
+  }
 
   return (
     <>
       <Card
         style={{
-          backgroundColor: "#f5fffa",
+          backgroundColor: "#F8F8F8",
           marginBottom: "25px",
           fontWeight: "bold",
-          border: "1px solid grey",
+          border: `1px solid ${getColorStatus(status)}`,
         }}
         sx={{ display: "flex" }}
+        s
       >
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
+            <Typography
+              paragraph
+              style={{
+                fontWeight: "bold",
+                color: "white",
+                textDecoration: "underline",
+                backgroundColor: getColorStatus(status),
+              }}
+            >
+              CAM {camElement.camId}: {camElement.camName}
+            </Typography>
             <Box
               component="form"
               sx={{
@@ -37,19 +54,6 @@ const CamElement = ({ camElement, editCamCallback }) => {
               noValidate
               autoComplete="off"
             >
-              <div style={{ marginLeft: "30px" }}>
-                <p
-                  style={{
-                    fontSize: "19px",
-                    fontWeight: "bold",
-                    textDecoration: "underline",
-                    textAlign: "left",
-                  }}
-                >
-                  Generic Info
-                </p>
-              </div>
-
               <TextField
                 fullWidth
                 id="outlined-read-only-input"
@@ -60,18 +64,8 @@ const CamElement = ({ camElement, editCamCallback }) => {
                   readOnly: true,
                 }}
               />
-
               <TextField
-                id="outlined-read-only-input"
-                label="Cam Name"
-                variant="standard"
-                defaultValue={camElement.camName}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-
-              <TextField
+                fullWidth
                 id="outlined-read-only-input"
                 label="Service Key"
                 variant="standard"
@@ -80,61 +74,6 @@ const CamElement = ({ camElement, editCamCallback }) => {
                   readOnly: true,
                 }}
               />
-
-              <TextField
-                id="outlined-read-only-input"
-                label="Event Data"
-                variant="standard"
-                s
-                defaultValue={camElement.eventData}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <FormControlLabel
-                control={
-                  <Radio
-                    style={{
-                      color: camElement.status === "Pending" ? "red" : "yellow",
-                    }}
-                  />
-                }
-                label="Status"
-              />
-            </Box>
-          </Grid>
-
-          <Divider orientation="vertical" flexItem>
-            <CamEditModal
-              callbackEditCam={editCam}
-              labelModal="Edit Cam"
-              scheduledStartDate={camElement.scheduledStartDate}
-              scheduledEndDate={camElement.scheduledEndDate}
-              camId={camElement.camId}
-            />
-          </Divider>
-
-          <Grid item xs={5}>
-            <Box
-              component="form"
-              sx={{
-                "& > :not(style)": { m: 1, width: "21ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <div style={{ marginLeft: "153px", marginBottom: "10px" }}>
-                <p
-                  style={{
-                    fontSize: "19px",
-                    fontWeight: "bold",
-                    textDecoration: "underline",
-                    textAlign: "left",
-                  }}
-                >
-                  Schedule Info
-                </p>
-              </div>
 
               <TextField
                 fullWidth
@@ -146,17 +85,15 @@ const CamElement = ({ camElement, editCamCallback }) => {
                   readOnly: true,
                 }}
               />
-
               <TextField
                 id="outlined-read-only-input"
                 label="Schedule End"
                 variant="standard"
                 defaultValue={camElement.scheduledEndDate}
                 InputProps={{
-                  readOnly: true,
-                }}
+                  readOnly: true                  
+                }}               
               />
-
               <BasicModal
                 labelModal="Force Start Schedule"
                 isSimpleModal={true}
@@ -167,8 +104,18 @@ const CamElement = ({ camElement, editCamCallback }) => {
                 isSimpleModal={true}
                 message="Do you want to proceed with Stopping the scheduler? Press OK to continue."
               />
+              <CamEditModal
+                callbackEditCam={editCam}
+                labelModal="Edit Cam"
+                scheduledStartDate={camElement.scheduledStartDate}
+                scheduledEndDate={camElement.scheduledEndDate}
+                camId={camElement.camId}
+              />
             </Box>
           </Grid>
+
+
+
         </Grid>
       </Card>
     </>

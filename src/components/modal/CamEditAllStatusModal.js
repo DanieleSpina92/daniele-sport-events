@@ -61,8 +61,9 @@ export default function CamEditAllStatusModal({
                 label="Age"
                 onChange={handleChange}
               >
+                <MenuItem value="Start">Start</MenuItem>
+                <MenuItem value="Stop">Stop</MenuItem>
                 <MenuItem value="Pending">Pending</MenuItem>
-                <MenuItem value="Success">Success</MenuItem>
               </Select>
             </FormControl>
             <Button style={{ textAlign: "center" }} onClick={editStatusCam}>

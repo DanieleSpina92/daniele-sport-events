@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   editAllScheduleCam,
   editAllStatusCam,
+  getEventById,
   getEventsCamByEvent,
 } from "../../utils/Manager";
 import CamElement from "./CamElement";
@@ -12,10 +13,11 @@ import CamEditModal from "../modal/CamEditModal";
 import { useParams } from "react-router-dom";
 
 const CamContainer = () => {
-
   let { eventID } = useParams();
 
-  const [listCam, setListCam] = useState(getEventsCamByEvent(eventID)[0].camList);
+  const [listCam, setListCam] = useState(
+    getEventsCamByEvent(eventID)[0].camList
+  );
   const [active, setActive] = useState();
 
   function editCurrentCam(cam) {
@@ -28,26 +30,26 @@ const CamContainer = () => {
     setActive(Math.random);
   }
 
-  function editScheduleAllCam(cam) {
-    console.log('cam.scheduledStartDate: ', cam.scheduledStartDate);
-    console.log('cam.scheduledEndDate: ', cam.scheduledEndDate);
-    setListCam(editAllScheduleCam(eventID, cam.scheduledStartDate, cam.scheduledEndDate));
+  function editAllSchedule(cam) {
+    setListCam(
+      editAllScheduleCam(eventID, cam.scheduledStartDate, cam.scheduledEndDate)
+    );
     setActive(Math.random);
   }
 
-  useEffect(() => {    
-
-    }, [listCam]);
+  useEffect(() => {}, [listCam]);
 
   return (
     <div>
       <div className="App" style={{ fontSize: "30px", textAlign: "center" }}>
         <Divider>
-          {getEventsCamByEvent(eventID)[0].camList[0].eventName}
+          {getEventById(eventID)[0].eventName} -{" "}
+          {getEventById(eventID)[0].eventData}
         </Divider>
+        <br /> <br />
         <div>
           <CamEditModal
-            callbackEditCam={editAllScheduleCam}
+            callbackEditCam={editAllSchedule}
             labelModal="Edit All Schedule Cam"
           />
           <br />
@@ -57,6 +59,7 @@ const CamContainer = () => {
           />
           <br />
         </div>
+        <br />
         {listCam.map((camElement, index) => {
           return (
             <CamElement

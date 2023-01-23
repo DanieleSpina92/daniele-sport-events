@@ -13,6 +13,10 @@ export function addEvent(newEvent) {
     return eventJson 
 }
 
+export function getEventById(eventId) {
+    return eventJson.filter( element => element.id ==eventId)
+}
+s
 export function getEventsCamByEvent(eventId) {
     return eventCamJson.filter( element => element.eventId ==eventId)
 }
@@ -38,7 +42,6 @@ export function editCam(eventId, cam) {
     "eventData":"2023-12-12 20:30"
    }
    currentCam[0] = newValue
-   console.log('modificato: ', a[cam.camId]);
    return eventCamJson 
 }
 
@@ -46,7 +49,7 @@ export function editAllStatusCam(eventId, status) {
     eventCamJson.filter( element => element.eventId ==eventId)[0].camList.forEach((cam) => {
         cam.status =status
     });
-   return eventCamJson.filter( element => element.eventId ==123)[0].camList
+   return eventCamJson.filter( element => element.eventId ==eventId)[0].camList
 }
 
 export function editAllScheduleCam(eventId, scheduledStartDate, scheduledEndDate) {
@@ -54,5 +57,5 @@ export function editAllScheduleCam(eventId, scheduledStartDate, scheduledEndDate
         cam.scheduledStartDate = scheduledStartDate
         cam.scheduledEndDate = scheduledEndDate
     });
-    return eventCamJson.filter( element => element.eventId ==123)[0].camList
+    return eventCamJson.filter( element => element.eventId ==eventId)[0].camList
 }

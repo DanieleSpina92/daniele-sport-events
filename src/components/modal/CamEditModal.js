@@ -39,8 +39,8 @@ export default function CamEditModal({
     callbackEditCam(cam);
   }
     return (
-      <div style={{border: '1px solid #8FBC8F',  borderRadius: '5px'}}>
-        <Button onClick={handleOpen}>{labelModal}</Button>
+      <div style={{border: '1px solid #8FBC8F',  borderRadius: '5px',width: 'calc(100% - 100px)'}}>
+        <Button onClick={handleOpen} style={{width: 'calc(100% - 100px)'}}>{labelModal}</Button>
         <Modal
           open={open}
           onClose={handleClose}

@@ -1,11 +1,11 @@
 {
     "data": [
         {
-            "eventId":123,
+            "eventId":1,
             "camList": [
                 {
                     "camId":1,
-                    "status":"Pending",
+                    "status":"Start",
                     "driverName":"Driver name cam1",
                     "serviceKey":123,
                     "camName":"Cam name cam1",
@@ -13,12 +13,11 @@
                     "scheduledEndDate":"2023-12-12 20:30",
                     "forceStartDate":"2023-12-12 20:30",
                     "forceEndDate":"2023-12-12 23:30",
-                    "eventName": "Monza F1",
-                    "eventData":"2023-12-12 20:30"
+                    "eventName": "Monza F1"
                 },
                 {
                     "camId":2,
-                    "status":"Success",
+                    "status":"Start",
                     "driverName":"Driver name cam2",
                     "serviceKey":456,
                     "camName":"Cam name cam2",
@@ -26,12 +25,11 @@
                     "scheduledEndDate":"2023-11-11 20:30",
                     "forceStartDate":"2023-11-11 20:30",
                     "forceEndDate":"2023-11-11 23:30",
-                    "eventName": "Monza F1",
-                    "eventData":"2023-11-11 20:30"
+                    "eventName": "Monza F1"
                 },
                 {
                     "camId":3,
-                    "status":"Pending",
+                    "status":"Stop",
                     "driverName":"Driver name cam3",
                     "serviceKey":789,
                     "camName":"Cam name cam3",
@@ -39,12 +37,11 @@
                     "scheduledEndDate":"2023-10-11 20:30",
                     "forceStartDate":"2023-10-11 20:30",
                     "forceEndDate":"2023-10-11 23:30",
-                    "eventName": "Monza F1",
-                    "eventData":"2023-10-11 20:30"
+                    "eventName": "Monza F1"
                 },
                 {
                     "camId":4,
-                    "status":"Success",
+                    "status":"Start",
                     "driverName":"Driver name cam4",
                     "serviceKey":987,
                     "camName":"Cam name cam4",
@@ -52,12 +49,11 @@
                     "scheduledEndDate":"2023-07-11 20:30",
                     "forceStartDate":"2023-07-11 20:30",
                     "forceEndDate":"2023-07-11 23:30",
-                    "eventName": "Monza F1",
-                    "eventData":"2023-07-11 20:30"
+                    "eventName": "Monza F1"
                 },
                 {
                     "camId":5,
-                    "status":"Inactive",
+                    "status":"Stop",
                     "driverName":"Driver name cam5",
                     "serviceKey":777,
                     "camName":"Cam name cam5",
@@ -65,18 +61,17 @@
                     "scheduledEndDate":"2023-04-11 20:30",
                     "forceStartDate":"2023-04-11 20:30",
                     "forceEndDate":"2023-04-11 23:30",
-                    "eventName": "Monza F1",
-                    "eventData":"2023-04-11 20:30"
+                    "eventName": "Monza F1"
                 }    
             ]
         },
 
         {
-            "eventId":456,
+            "eventId":2,
             "camList": [
                 {
                     "camId":1,
-                    "status":"Pending",
+                    "status":"Start",
                     "driverName":"Driver name cam1",
                     "serviceKey":333,
                     "camName":"Cam name cam1 di 456",
@@ -84,12 +79,11 @@
                     "scheduledEndDate":"2023-12-12 20:30",
                     "forceStartDate":"2023-12-12 20:30",
                     "forceEndDate":"2023-12-12 23:30",
-                    "eventName": "Spagna F1",
-                    "eventData":"2023-12-12 20:30"
+                    "eventName": "Spagna F1"
                 },
                 {
                     "camId":2,
-                    "status":"Success",
+                    "status":"Stop",
                     "driverName":"Driver name cam2 di 456",
                     "serviceKey":444,
                     "camName":"Cam name cam2",
@@ -97,12 +91,11 @@
                     "scheduledEndDate":"2023-11-11 20:30",
                     "forceStartDate":"2023-11-11 20:30",
                     "forceEndDate":"2023-11-11 23:30",
-                    "eventName": "Spagna F1",
-                    "eventData":"2023-11-11 20:30"
+                    "eventName": "Spagna F1"
                 },
                 {
                     "camId":3,
-                    "status":"Pending",
+                    "status":"Start",
                     "driverName":"Driver name cam3 di 456",
                     "serviceKey":555,
                     "camName":"Cam name cam3",
@@ -110,12 +103,11 @@
                     "scheduledEndDate":"2023-10-11 20:30",
                     "forceStartDate":"2023-10-11 20:30",
                     "forceEndDate":"2023-10-11 23:30",
-                    "eventName": "Spagna F1",
-                    "eventData":"2023-10-11 20:30"
+                    "eventName": "Spagna F1"
                 },
                 {
                     "camId":4,
-                    "status":"Success",
+                    "status":"Stop",
                     "driverName":"Driver name cam4 di 456",
                     "serviceKey":666,
                     "camName":"Cam name cam4",
@@ -123,12 +115,11 @@
                     "scheduledEndDate":"2023-07-11 20:30",
                     "forceStartDate":"2023-07-11 20:30",
                     "forceEndDate":"2023-07-11 23:30",
-                    "eventName": "Spagna F1",
-                    "eventData":"2023-07-11 20:30"
+                    "eventName": "Spagna F1"
                 },
                 {
                     "camId":5,
-                    "status":"Inactive",
+                    "status":"Start",
                     "driverName":"Driver name cam5 di 456",
                     "serviceKey":777,
                     "camName":"Cam name cam5",
@@ -136,8 +127,7 @@
                     "scheduledEndDate":"2023-04-11 20:30",
                     "forceStartDate":"2023-04-11 20:30",
                     "forceEndDate":"2023-04-11 23:30",
-                    "eventName": "Spagna F1",
-                    "eventData":"2023-04-11 20:30"
+                    "eventName": "Spagna F1"
                 }    
             ]
         }
