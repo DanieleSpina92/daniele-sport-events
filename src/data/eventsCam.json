@@ -1,0 +1,146 @@
+{
+    "data": [
+        {
+            "eventId":123,
+            "camList": [
+                {
+                    "camId":1,
+                    "status":"Pending",
+                    "driverName":"Driver name cam1",
+                    "serviceKey":123,
+                    "camName":"Cam name cam1",
+                    "scheduledStartDate":"2023-12-12 20:30",
+                    "scheduledEndDate":"2023-12-12 20:30",
+                    "forceStartDate":"2023-12-12 20:30",
+                    "forceEndDate":"2023-12-12 23:30",
+                    "eventName": "Monza F1",
+                    "eventData":"2023-12-12 20:30"
+                },
+                {
+                    "camId":2,
+                    "status":"Success",
+                    "driverName":"Driver name cam2",
+                    "serviceKey":456,
+                    "camName":"Cam name cam2",
+                    "scheduledStartDate":"2023-11-11 20:30",
+                    "scheduledEndDate":"2023-11-11 20:30",
+                    "forceStartDate":"2023-11-11 20:30",
+                    "forceEndDate":"2023-11-11 23:30",
+                    "eventName": "Monza F1",
+                    "eventData":"2023-11-11 20:30"
+                },
+                {
+                    "camId":3,
+                    "status":"Pending",
+                    "driverName":"Driver name cam3",
+                    "serviceKey":789,
+                    "camName":"Cam name cam3",
+                    "scheduledStartDate":"2023-10-11 20:30",
+                    "scheduledEndDate":"2023-10-11 20:30",
+                    "forceStartDate":"2023-10-11 20:30",
+                    "forceEndDate":"2023-10-11 23:30",
+                    "eventName": "Monza F1",
+                    "eventData":"2023-10-11 20:30"
+                },
+                {
+                    "camId":4,
+                    "status":"Success",
+                    "driverName":"Driver name cam4",
+                    "serviceKey":987,
+                    "camName":"Cam name cam4",
+                    "scheduledStartDate":"2023-07-11 20:30",
+                    "scheduledEndDate":"2023-07-11 20:30",
+                    "forceStartDate":"2023-07-11 20:30",
+                    "forceEndDate":"2023-07-11 23:30",
+                    "eventName": "Monza F1",
+                    "eventData":"2023-07-11 20:30"
+                },
+                {
+                    "camId":5,
+                    "status":"Inactive",
+                    "driverName":"Driver name cam5",
+                    "serviceKey":777,
+                    "camName":"Cam name cam5",
+                    "scheduledStartDate":"2023-04-11 20:30",
+                    "scheduledEndDate":"2023-04-11 20:30",
+                    "forceStartDate":"2023-04-11 20:30",
+                    "forceEndDate":"2023-04-11 23:30",
+                    "eventName": "Monza F1",
+                    "eventData":"2023-04-11 20:30"
+                }    
+            ]
+        },
+
+        {
+            "eventId":456,
+            "camList": [
+                {
+                    "camId":1,
+                    "status":"Pending",
+                    "driverName":"Driver name cam1",
+                    "serviceKey":333,
+                    "camName":"Cam name cam1 di 456",
+                    "scheduledStartDate":"2023-12-12 20:30",
+                    "scheduledEndDate":"2023-12-12 20:30",
+                    "forceStartDate":"2023-12-12 20:30",
+                    "forceEndDate":"2023-12-12 23:30",
+                    "eventName": "Spagna F1",
+                    "eventData":"2023-12-12 20:30"
+                },
+                {
+                    "camId":2,
+                    "status":"Success",
+                    "driverName":"Driver name cam2 di 456",
+                    "serviceKey":444,
+                    "camName":"Cam name cam2",
+                    "scheduledStartDate":"2023-11-11 20:30",
+                    "scheduledEndDate":"2023-11-11 20:30",
+                    "forceStartDate":"2023-11-11 20:30",
+                    "forceEndDate":"2023-11-11 23:30",
+                    "eventName": "Spagna F1",
+                    "eventData":"2023-11-11 20:30"
+                },
+                {
+                    "camId":3,
+                    "status":"Pending",
+                    "driverName":"Driver name cam3 di 456",
+                    "serviceKey":555,
+                    "camName":"Cam name cam3",
+                    "scheduledStartDate":"2023-10-11 20:30",
+                    "scheduledEndDate":"2023-10-11 20:30",
+                    "forceStartDate":"2023-10-11 20:30",
+                    "forceEndDate":"2023-10-11 23:30",
+                    "eventName": "Spagna F1",
+                    "eventData":"2023-10-11 20:30"
+                },
+                {
+                    "camId":4,
+                    "status":"Success",
+                    "driverName":"Driver name cam4 di 456",
+                    "serviceKey":666,
+                    "camName":"Cam name cam4",
+                    "scheduledStartDate":"2023-07-11 20:30",
+                    "scheduledEndDate":"2023-07-11 20:30",
+                    "forceStartDate":"2023-07-11 20:30",
+                    "forceEndDate":"2023-07-11 23:30",
+                    "eventName": "Spagna F1",
+                    "eventData":"2023-07-11 20:30"
+                },
+                {
+                    "camId":5,
+                    "status":"Inactive",
+                    "driverName":"Driver name cam5 di 456",
+                    "serviceKey":777,
+                    "camName":"Cam name cam5",
+                    "scheduledStartDate":"2023-04-11 20:30",
+                    "scheduledEndDate":"2023-04-11 20:30",
+                    "forceStartDate":"2023-04-11 20:30",
+                    "forceEndDate":"2023-04-11 23:30",
+                    "eventName": "Spagna F1",
+                    "eventData":"2023-04-11 20:30"
+                }    
+            ]
+        }
+    ]
+
+}

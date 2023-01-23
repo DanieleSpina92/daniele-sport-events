@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "id": "123",
+            "eventName": "evento 1",
+            "eventData":"2022-12-12"
+        },
+        {
+            "id": "456",
+            "eventName": "evento 2",
+            "eventData":"2023-03-21"
+        }
+    ]
+}
