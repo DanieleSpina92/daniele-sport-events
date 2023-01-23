@@ -16,7 +16,7 @@ export function addEvent(newEvent) {
 export function getEventById(eventId) {
     return eventJson.filter( element => element.id ==eventId)
 }
-s
+
 export function getEventsCamByEvent(eventId) {
     return eventCamJson.filter( element => element.eventId ==eventId)
 }
