@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, TextField, Grid, Typography } from "@mui/material";
+import { Card, TextField, Grid, Typography, IconButton } from "@mui/material";
 import { Box } from "@mui/system";
 import BasicModal from "../modal/BasicModal";
 import CamEditModal from "../modal/CamEditModal";
@@ -49,7 +49,7 @@ const CamElement = ({ camElement, editCamCallback }) => {
             <Box
               component="form"
               sx={{
-                "& > :not(style)": { m: 1, width: "25ch" },
+                "& > :not(style)": { m: 2, width: "25ch" },
               }}
               noValidate
               autoComplete="off"
@@ -92,7 +92,16 @@ const CamElement = ({ camElement, editCamCallback }) => {
                 defaultValue={camElement.scheduledEndDate}
                 InputProps={{
                   readOnly: true                  
-                }}               
+                }}    
+                  
+              />
+              <div style={{display: 'flex', marginLeft: '486px'}}>
+              <CamEditModal
+                callbackEditCam={editCam}
+                labelModal="Edit Cam"
+                scheduledStartDate={camElement.scheduledStartDate}
+                scheduledEndDate={camElement.scheduledEndDate}
+                camId={camElement.camId}
               />
               <BasicModal
                 labelModal="Force Start Schedule"
@@ -104,18 +113,10 @@ const CamElement = ({ camElement, editCamCallback }) => {
                 isSimpleModal={true}
                 message="Do you want to proceed with Stopping the scheduler? Press OK to continue."
               />
-              <CamEditModal
-                callbackEditCam={editCam}
-                labelModal="Edit Cam"
-                scheduledStartDate={camElement.scheduledStartDate}
-                scheduledEndDate={camElement.scheduledEndDate}
-                camId={camElement.camId}
-              />
+              
+              </div>
             </Box>
           </Grid>
-
-
-
         </Grid>
       </Card>
     </>

@@ -42,7 +42,7 @@ export default function BasicModal({
 
   return (
     <div>
-      <Button onClick={handleOpen}>
+      <Button onClick={handleOpen} style={{width: '300px', marginRight: '106px'}}>
         {labelModal}
       </Button>
       <Modal
